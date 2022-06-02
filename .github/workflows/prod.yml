@@ -1,0 +1,24 @@
+name: Deploy build to PyPI
+
+on:
+  push:
+    branches:
+        - main
+    paths:
+        - 'prod/**' #Directorio repo del PUSH / PR
+env:
+  PYTHON_FILE_DIR: './prod**'
+
+
+jobs:
+  deploy-library:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+      - name: Building
+        run: |
+          ls -l
