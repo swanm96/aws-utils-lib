@@ -1,4 +1,3 @@
-import imp
 from .Functions import globalSession
 from .Functions import queryWithIndex
 from .Functions import queryWithKey
