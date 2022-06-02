@@ -5,9 +5,9 @@ on:
     branches:
         - main
     paths:
-        - 'prod/**' #Directorio repo del PUSH / PR
+        - 'test/**' #Directorio repo del PUSH / PR
 env:
-  PYTHON_FILE_DIR: './prod**'
+  PYTHON_FILE_DIR: './test**'
 
 
 jobs:

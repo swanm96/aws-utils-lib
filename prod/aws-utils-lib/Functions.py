@@ -8,7 +8,7 @@ import datetime
 def globalSession(profile,table):
     global session
     session=boto3.Session(profile_name=profile)
-    global gdb
+    global gdb 
     resource=session.resource('dynamodb')
     gdb=resource.Table(table)
     return True
