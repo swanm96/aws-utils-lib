@@ -23,4 +23,14 @@ jobs:
         run: |
           ls -l
           python3 setup.py sdist bdist_wheel
+          ls -l
         working-directory: ${{ env.PYTHON_FILE_DIR }}
+
+      - name: Publish a Python distribution to PyPI}
+        working-directory: ${{ env.PYTHON_FILE_DIR }}
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.TESTPYPI }}
+          repository_url: https://test.pypi.org/legacy/
+          skip_existing: true
