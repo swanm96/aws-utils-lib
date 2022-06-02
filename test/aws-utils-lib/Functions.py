@@ -12,7 +12,7 @@ def globalSession(profile,table):
     resource=session.resource('dynamodb')
     gdb=resource.Table(table)
     return True
-
+   
 
 def isession(profile):
     isess=boto3.Session(profile_name=profile)
