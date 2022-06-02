@@ -13,7 +13,6 @@ def globalSession(profile,table):
     gdb=resource.Table(table)
     return True
      
-
 def isession(profile):
     isess=boto3.Session(profile_name=profile)
     return isess
