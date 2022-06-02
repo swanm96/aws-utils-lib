@@ -34,4 +34,3 @@ jobs:
           password: ${{ secrets.TESTPYPI }}
           repository_url: https://test.pypi.org/legacy/
           skip_existing: true
-        working-directory: ${{ env.PYTHON_FILE_DIR }}
