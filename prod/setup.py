@@ -17,7 +17,7 @@ LONG_DESC_TYPE = "text/markdown"
 INSTALL_REQUIRES = [
       'boto3',
       ]
-
+ 
 setup(
     name=PACKAGE_NAME,
     version=VERSION,
