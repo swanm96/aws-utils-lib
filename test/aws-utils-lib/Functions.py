@@ -16,7 +16,7 @@ def globalSession(profile,table):
 def isession(profile):
     isess=boto3.Session(profile_name=profile)
     return isess
-
+ 
 def db(table, **kwargs):
     if "session" in kwargs:
        conn=kwargs["session"]
