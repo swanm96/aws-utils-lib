@@ -1,13 +1,12 @@
-name: Deploy build to PyPI TEST
+name: Deploy build to PyPI PROD
 
 on:
   push:
     branches:
         - main
     paths:
-        - 'test/**' 
-env:
-  PYTHON_FILE_DIR: 'test'
+        - 'prod/**' 
+  PYTHON_FILE_DIR: 'prod'
 
 
 jobs:
@@ -22,7 +21,7 @@ jobs:
       - name: Building
         run: |          
           python3 setup.py sdist bdist_wheel
-          
+
         working-directory: ${{ env.PYTHON_FILE_DIR }}
 
       - name: Publish a Python distribution to PyPI}
@@ -30,7 +29,6 @@ jobs:
         with:
           verbose: true
           user: __token__
-          password: ${{ secrets.TESTPYPI }}
-          repository_url: https://test.pypi.org/legacy/
+          password: ${{ secrets.PYPIPROD }}
           skip_existing: true
-          packages_dir: test/dist/
+          packages_dir: prod/dist/
