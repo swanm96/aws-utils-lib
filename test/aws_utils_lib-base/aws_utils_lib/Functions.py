@@ -8,21 +8,22 @@ import datetime
 def globalSession(profile,table):
     global session
     session=boto3.Session(profile_name=profile)
-    global gdb
+    global gdb 
     resource=session.resource('dynamodb')
     gdb=resource.Table(table)
     return True
-     
+
 def isession(profile):
     isess=boto3.Session(profile_name=profile)
     return isess
+
 
 def db(table, **kwargs):
     if "session" in kwargs:
        conn=kwargs["session"]
     else:
         conn=session
-
+ 
     resource=conn.resource('dynamodb')
     resource=resource.Table(table)
     return resource

@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '0.9.1' 
+VERSION = '1.0.1' 
 PACKAGE_NAME = 'aws_utils_lib' 
 AUTHOR = 'Jonathan E. Aguiar' 
 AUTHOR_EMAIL = 'jonathtanm@gmail.com' 
@@ -17,7 +17,7 @@ LONG_DESC_TYPE = "text/markdown"
 INSTALL_REQUIRES = [
       'boto3',
       ]
-
+ 
 setup(
     name=PACKAGE_NAME,
     version=VERSION,

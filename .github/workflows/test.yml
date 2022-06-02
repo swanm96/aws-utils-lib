@@ -7,7 +7,7 @@ on:
     paths:
         - 'test/**' 
 env:
-  PYTHON_FILE_DIR: 'test'
+  PYTHON_FILE_DIR: 'test/aws_utils_lib-base'
 
 
 jobs:
@@ -32,6 +32,6 @@ jobs:
           password: ${{ secrets.TESTPYPI }}
           repository_url: https://test.pypi.org/legacy/
           skip_existing: true
-          packages_dir: test/dist/
+          packages_dir: ${{ env.PYTHON_FILE_DIR }}/dist/
           
           
