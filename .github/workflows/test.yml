@@ -22,4 +22,4 @@ jobs:
       - name: Building
         run: |
           ls -l
-      working-directory: ${{ env.PYTHON_FILE_DIR }}
+        working-directory: ${{ env.PYTHON_FILE_DIR }}
