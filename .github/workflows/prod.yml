@@ -7,7 +7,7 @@ on:
     paths:
         - 'prod/**' 
 env:
-  PYTHON_FILE_DIR: 'prod'
+  PYTHON_FILE_DIR: 'prod/aws_utils_lib-base'
 
 
 jobs:
@@ -21,16 +21,16 @@ jobs:
           submodules: 'true'
       - name: Building
         run: |          
-          python3 setup.py sdist bdist_wheel
+          python3 setup.py sdist bdist_wheel --universal
 
         working-directory: ${{ env.PYTHON_FILE_DIR }}
 
       - name: Publish a Python distribution to PyPI}
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
+          verbose: true
           user: __token__
           password: ${{ secrets.PYPIPROD }}
           skip_existing: true
-          packages_dir: prod/dist/
-          verify_metadata: false
+          packages_dir: ${{ env.PYTHON_FILE_DIR }}/dist
 

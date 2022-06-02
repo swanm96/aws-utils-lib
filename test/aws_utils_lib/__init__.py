@@ -1,3 +1,7 @@
+import urllib3
+import chardet
+import warnings
+
 from .Functions import globalSession
 from .Functions import queryWithIndex
 from .Functions import queryWithKey
