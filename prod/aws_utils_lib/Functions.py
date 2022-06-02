@@ -23,7 +23,7 @@ def db(table, **kwargs):
        conn=kwargs["session"]
     else:
         conn=session
-
+ 
     resource=conn.resource('dynamodb')
     resource=resource.Table(table)
     return resource

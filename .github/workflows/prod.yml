@@ -32,3 +32,5 @@ jobs:
           password: ${{ secrets.PYPIPROD }}
           skip_existing: true
           packages_dir: prod/dist/
+          verify_metadata: false
+
