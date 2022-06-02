@@ -7,7 +7,7 @@ on:
     paths:
         - 'test/**' #Directorio repo del PUSH / PR
 env:
-  PYTHON_FILE_DIR: 'test**'
+  PYTHON_FILE_DIR: 'test/**'
 
 
 jobs:
