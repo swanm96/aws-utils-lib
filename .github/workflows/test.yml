@@ -22,4 +22,5 @@ jobs:
       - name: Building
         run: |
           ls -l
+          python3 setup.py sdist bdist_wheel
         working-directory: ${{ env.PYTHON_FILE_DIR }}
