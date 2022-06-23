@@ -152,7 +152,9 @@ def update(partkeyid,value,**kwargs):
     for key in index:
         at=at+'":'+abc[ax]+'":"'+kwargs[index[ax]]+'",'
         ax+=1
+
     EAVal='{'+at+'":zz":"'+datenow+'"}'
+    pprint(EAVal)
     EAVal = json.loads(EAVal)
     try:
         tb.update_item(        
