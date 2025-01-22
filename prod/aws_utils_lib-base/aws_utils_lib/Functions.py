@@ -154,12 +154,13 @@ def deleteItem(key,value,**kwargs):
     else:
         tb=gdb
     try:
-        tb.delete_item(     
+        response = tb.delete_item(     
             Key={
                 key:value
             }
         )
-        print("Registro eliminado")
+        return response
+        #print("Registro eliminado")
     except:
         raise 
 
@@ -172,13 +173,14 @@ def deleteItemWithSortKey(key,value,sortkey,skvalue,**kwargs):
     else:
         tb=gdb
     try:
-        tb.delete_item(     
+        response = tb.delete_item(     
             Key={
                 key:value,
                 sortkey:skvalue
             }
         )
-        print("Registro eliminado")
+        return response
+        #print("Registro eliminado")
     except:
         raise
 
