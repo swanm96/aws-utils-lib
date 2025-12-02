@@ -692,22 +692,22 @@ def updateWithExpression(partkeyid,valueKey,**kwargs):
     listaExpresionesNames=('#ab','#cd','#ef','#gh','#ij','#kl','#mn','#op','#qr','#st')
     listaExpresionesValues=(':a',':c',':e',':g',':i',':k',':m',':o',':q',':s')
     
-		if "dflag" in kwargs:
-			dflag=kwargs["dflag"]
-		else:
-			dflag=False
+	if "dflag" in kwargs:
+		dflag=kwargs["dflag"]
+	else:
+		dflag=False
     kwargs.pop('tbname',None)
     kwargs.pop('session',None)
-		kwargs.pop('disable_updte',None)
+	kwargs.pop('disable_updte',None)
 
-		if dflag:
-			EAVal='{'+at+'}'
-	    EAVal = json.loads(EAVal)
-	    eAN={}
-		else:
-	    EAVal='{'+at+'":zz":"'+datenow+'"}'
-	    EAVal = json.loads(EAVal)
-	    eAN={'#ud': 'UpdatedDate'}
+	if dflag:
+		EAVal='{'+at+'}'
+		EAVal = json.loads(EAVal)
+		eAN={}
+	else:
+		EAVal='{'+at+'":zz":"'+datenow+'"}'
+		EAVal = json.loads(EAVal)
+		eAN={'#ud': 'UpdatedDate'}
 
     updateKey = {}
     updateKey[partkeyid] = valueKey
