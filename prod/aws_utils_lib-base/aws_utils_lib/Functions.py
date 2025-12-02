@@ -5,6 +5,7 @@ import string
 from boto3.dynamodb.conditions import Key
 import datetime
 
+
 def globalSession(profile,table=None):
     global session
     session=boto3.Session(profile_name=profile)
