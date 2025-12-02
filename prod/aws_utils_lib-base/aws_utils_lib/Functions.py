@@ -698,7 +698,7 @@ def updateWithExpression(partkeyid,valueKey,**kwargs):
 		dflag=False
     kwargs.pop('tbname',None)
     kwargs.pop('session',None)
-	kwargs.pop('disable_updte',None)
+	kwargs.pop('dflag',None)
 
 	if dflag:
 		EAVal='{'+at+'}'
