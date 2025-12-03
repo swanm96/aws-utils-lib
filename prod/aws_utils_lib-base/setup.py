@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '1.5.6' 
+VERSION = '1.5.7' 
 PACKAGE_NAME = 'aws_utils_lib' 
 AUTHOR = 'Jonathan E. Aguiar' 
 AUTHOR_EMAIL = 'jonathtanm@gmail.com' 
